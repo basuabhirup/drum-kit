@@ -38,7 +38,7 @@ for (var i = 0; i<document.querySelectorAll(".drum").length; i++) {
         break;
 
 
-      default:
+      default: console.log(this.innerHTML);
 
     }
     });
