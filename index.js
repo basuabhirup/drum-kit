@@ -6,7 +6,7 @@ for (var i = 0; i<document.querySelectorAll(".drum").length; i++) {
 }
 
 // Detecting Keyboard press
-document.addEventListener("keydown", function(){
+document.addEventListener("keydown", function(event){
   drumSound(event.key);
 });
 
