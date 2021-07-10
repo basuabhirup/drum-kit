@@ -2,16 +2,18 @@
 for (var i = 0; i<document.querySelectorAll(".drum").length; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     drumSound(this.innerHTML);
+    buttonAnimation(this.innerHTML);
     });
 }
 
 // Detecting Keyboard press
 document.addEventListener("keydown", function(event){
   drumSound(event.key);
+  buttonAnimation(event.key);
 });
 
 
-// A function to switch sounds against proper button clicks / keyboard presses
+// Creating a function to switch sounds for button clicks / keyboard presses
 function drumSound (key) {
   switch (key) {
     case "w":
@@ -53,4 +55,17 @@ function drumSound (key) {
     default: console.log(key);
 
   }
+}
+
+
+// Creating a function to create animations for button clicks / keyboard presses
+function buttonAnimation(key){
+  document.querySelector("." + key).classList.add("pressed");
+  setTimeout(
+    function(){
+      document.querySelector("." + key).classList.remove("pressed");
+    }
+    , 100
+  )
+
 }
