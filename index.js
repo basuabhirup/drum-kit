@@ -8,8 +8,8 @@ for (var i = 0; i<document.querySelectorAll(".drum").length; i++) {
 
 // Detecting Keyboard press
 document.addEventListener("keydown", function(event){
-  drumSound(event.key);
-  buttonAnimation(event.key);
+  drumSound(event.key.toLowerCase());
+  buttonAnimation(event.key.toLowerCase());
 });
 
 
